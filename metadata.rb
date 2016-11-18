@@ -4,7 +4,7 @@ maintainer_email 'r.ressl@safematix.com'
 license 'all_rights'
 description 'Installs/Configures mariadb_galera'
 long_description 'Installs/Configures mariadb_galera'
-version '0.1.0'
+version '0.1.1'
 
 depends 'firewall'
 
