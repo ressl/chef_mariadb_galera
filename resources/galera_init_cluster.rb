@@ -9,8 +9,8 @@ property :sst_pw, String
 default_action :create
 
 action :create do
-  node.default['galera']['cluster'] = true if ::File.socket?(socket)
-  cluster = search(:node, "role:galera").first['galera']['cluster']
+  ::File.socket?(socket) ? (node.default['galera']['cluster'] = true) : node.default['galera'].delete('cluster')
+  cluster = search(:node, 'role:galera').first['galera']['cluster']
 
   execute 'galera new cluster' do
     command 'galera_new_cluster'
