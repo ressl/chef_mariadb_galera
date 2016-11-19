@@ -6,7 +6,7 @@
 
 data_bag = node['mariadb_galera']['data_bag']
 secret = data_bag_item(data_bag['name'], data_bag['secret_item'])
-cluster_nodes = search(:node, "role:galera").sort.map { |nodes| nodes['hostname'] }
+cluster_nodes = search(:node, 'role:galera').sort.map { |nodes| nodes['hostname'] }
 initiator = search(:node, 'mariadb_galera:initiator').sort.map { |nodes| nodes['hostname'] }.first
 
 template '/etc/my.cnf.d/server.cnf' do

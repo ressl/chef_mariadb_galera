@@ -1,17 +1,17 @@
 name 'mariadb_galera'
 maintainer 'Robert Ressl'
 maintainer_email 'r.ressl@safematix.com'
-license 'all_rights'
+license 'GPL v3'
 description 'Installs/Configures mariadb_galera'
 long_description 'Installs/Configures mariadb_galera'
 version '0.1.1'
 
 depends 'firewall'
 
-# If you upload to Supermarket you should set this so your cookbook
-# gets a `View Issues` link
-issues_url 'https://github.com/safematix/mariadb_galera/issues' if respond_to?(:issues_url)
+supports 'redhat'
+supports 'centos'
 
-# If you upload to Supermarket you should set this so your cookbook
-# gets a `View Source` link
+issues_url 'https://github.com/safematix/mariadb_galera/issues' if respond_to?(:issues_url)
 source_url 'https://github.com/safematix/mariadb_galera' if respond_to?(:source_url)
+
+chef_version '>= 12.1'

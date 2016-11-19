@@ -1,4 +1,14 @@
-# mariadb_galera
+# mariadb_galera Cookbook
 
-TODO: Enter the cookbook description here.
+## Scope
 
+
+
+## Requirements
+
+- Chef 12.5 or higher
+
+## Cookbook Dependencies
+
+There are no hard coupled dependencies.
+However, there is a loose dependency on `firewall` for firewall recipe.
