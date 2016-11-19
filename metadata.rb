@@ -11,7 +11,7 @@ depends 'firewall'
 supports 'redhat'
 supports 'centos'
 
-issues_url 'https://github.com/safematix/mariadb_galera/issues' if respond_to?(:issues_url)
-source_url 'https://github.com/safematix/mariadb_galera' if respond_to?(:source_url)
+issues_url 'https://github.com/safematix/chef_mariadb_galera/issues' if respond_to?(:issues_url)
+source_url 'https://github.com/safematix/chef_mariadb_galera' if respond_to?(:source_url)
 
 chef_version '>= 12.1'
