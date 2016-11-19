@@ -1,0 +1,24 @@
+driver:
+  name: dokken
+  chef_version: latest
+  privileged: true # because Docker and SystemD/Upstart
+
+transport:
+  name: dokken
+
+provisioner:
+  name: dokken
+
+verifier:
+  name: inspec
+
+platforms:
+- name: centos-7
+  driver:
+    image: centos:7
+
+suites:
+  - name: default
+    run_list:
+      - recipe[mariadb_galera::repository]
+      - recipe[mariadb_galera::package]
